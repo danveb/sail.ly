@@ -76,9 +76,9 @@ const deleteClub = async (req, res, next) => {
         const { id } = req.params; 
         // DELETE query
         const club = await pool.query('DELETE FROM clubs WHERE id = $1', [id]); 
-        // error check for non-existing club 
-        if(club.rows.length === 0) {
-            res.status(400);
+        // // error check for non-existing club 
+        if(!id) {
+            res.status(404);
             throw new Error("Could not find club"); 
         };
         // console.log(club); 
