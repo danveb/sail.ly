@@ -10,8 +10,8 @@ CREATE TABLE users(
     username VARCHAR(50) NOT NULL UNIQUE,
     first_name VARCHAR(30) NOT NULL, 
     last_name VARCHAR(30) NOT NULL, 
-    email VARCHAR(50) NOT NULL UNIQUE, 
-    password VARCHAR(50) NOT NULL
+    email VARCHAR(255) NOT NULL UNIQUE, 
+    password TEXT NOT NULL
 ); 
 
 DROP TABLE IF EXISTS clubs;
