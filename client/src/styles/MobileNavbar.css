@@ -37,9 +37,6 @@
 
 .mobile__menu li {
     padding: 13px 15px; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
 }
 
 .mobile__menu a {
@@ -48,6 +45,9 @@
     text-decoration: none; 
     text-transform: uppercase; 
     color: #000; 
+    display: flex; 
+    justify-content: space-between; 
+    width: 100%; 
 }
 
 .mobile__menu img {

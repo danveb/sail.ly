@@ -63,6 +63,12 @@
     font-family: "Poppins", sans-serif;
     text-transform: uppercase; 
     cursor: pointer; 
+    transition: color .3s ease-in; 
+}
+
+.navbar__links li a:hover {
+    color: #9b9b9b; 
+    transition: color .3s ease-out; 
 }
 
 /* @media screen and (max-width: 768px) {

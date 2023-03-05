@@ -9,9 +9,10 @@ export const MobileNavbar = ({ menuOpen, setMenuOpen }) => {
             <div className="mobile__menu">
                 <ul>
                     {navLinks.map((link)=> (
-                        <li key={link.id} onClick={()=> setMenuOpen(!menuOpen)}>
-                            <Link to={`${link.path}`}>{link.text}</Link>
-                            <img src={chevronRight} alt="chevron right arrow" /> 
+                        <li key={link.id}>
+                            <Link to={`${link.path}`} onClick={()=> setMenuOpen(!menuOpen)}>{link.text}
+                                <img src={chevronRight} alt="chevron right arrow" /> 
+                            </Link>
                         </li>
                     ))}
                 </ul>

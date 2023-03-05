@@ -48,3 +48,14 @@ body {
     border-radius: 20px;
     border: transparent;
 }
+
+/* pseudoelement for selecting text and turns background yellow and text black */ 
+::selection {
+    color: #000; 
+    background-color: #ff0; 
+}
+
+::moz-selection {
+    color: #000; 
+    background-color: #ff0; 
+}
