@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&family=Saira+Semi+Condensed:wght@100;200;300;400&family=Yrsa:wght@300;400&family=Square+Peg&family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&family=Yrsa:wght@300;400&family=Prata&display=swap');
 
 :root {
     /* Palette Colors */
@@ -23,16 +23,16 @@
 }
 
 body {
-    font-family: "Yrsa", "Square Peg", "Prata", "Saira Semi Condensed", "Poppins", "Futura IT Pro Book", sans-serif; 
+    font-family: "Yrsa", "Prata", "Poppins", sans-serif; 
     font-weight: 300; 
     background-color: #000; 
 }
 
 /* custom font */
-@font-face {
+/* @font-face {
     font-family: "Futura IT Pro Book";
     src: url("./fonts/futura-lt-pro-book.otf") format("truetype"),
-}
+} */
 
 /* Chrome Scrollbar change width */
 ::-webkit-scrollbar {
