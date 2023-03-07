@@ -24,3 +24,6 @@ yarn-error.log*
 
 # fonts directory ONLY for personal use
 /src/fonts
+
+# .env
+.env

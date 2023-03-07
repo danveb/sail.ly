@@ -33,6 +33,12 @@
     color: #fff; 
 }
 
+.footer__logo a:hover,
+.footer__links--main a:hover {
+    color: #9d6c04; 
+    transition: color .3s ease-out; 
+}
+
 .footer__links {
     display: flex; 
     justify-content: space-around; 

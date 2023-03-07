@@ -5,9 +5,11 @@ import { MobileNavbar } from "./components/MobileNavbar";
 import { Home } from "./pages/Home"; 
 import { About } from "./pages/About"; 
 import { Clubs } from "./pages/Clubs"; 
-import { Climate } from "./pages/Climate"; 
 import { Club } from "./components/Club"; 
 import { Footer } from "./components/Footer";
+import { FAQ } from "./pages/FAQ";
+import { PrivacyPolicy } from "./pages/PrivacyPolicy";
+import { TermsAndConditions } from "./pages/TermsAndConditions";
 
 const ScrollToTop = () => {
     const { pathname } = useLocation(); 
@@ -18,6 +20,7 @@ const ScrollToTop = () => {
 }; 
 
 export const App = () => {
+    // useState
     const [menuOpen, setMenuOpen] = useState(false); 
 
     return (
@@ -30,8 +33,10 @@ export const App = () => {
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/clubs" element={<Clubs />} />
-                    <Route path="/clubs/:id" element={<Club />} />
-                    <Route path="/climate" element={<Climate />} />
+                    <Route path="/clubs/:name" element={<Club />} />
+                    <Route path="/faq" element={<FAQ />} />
+                    <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                    <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
                 </Routes>
                 <Footer />
             </Router>

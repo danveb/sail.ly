@@ -7,8 +7,8 @@ export const aboutSailing = [
     },
     {
         id: 2, 
-        header: "Ocean", 
-        text_intro: "Feel empowered to conquer the open waters. Dream on the seas.",
-        text_main: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quia voluptatibus facilis commodi similique explicabo distinctio odit quasi dicta consequuntur, impedit nostrum eum cumque dolor molestiae? Quasi praesentium molestiae placeat."
+        header: "Wind", 
+        text_intro: "Wind is an important factor when sailing because it provides the power necessary to move the sailboat through the water. The wind's force on the sail generates a forward thrust that propels the boat forward. The sailboat's speed and direction are determined by the wind direction and the angle of the sail relative to the wind. A sailor must understand how to use the wind to their advantage in order to control the boat's speed and direction.",
+        text_main: "For example, by adjusting the sail's angle and shape, a sailor can harness the wind's energy to achieve maximum speed, or change direction by tacking or jibing. Understanding how to read and respond to changes in wind direction and speed is essential for a sailor to navigate safely and efficiently. In addition to propulsion, wind also affects a sailboat's stability and maneuverability. Strong winds can make the boat unstable, and gusts of wind can cause the boat to heel (tilt) and change direction suddenly. Sailors must be skilled at handling the boat in different wind conditions and adjusting their sail plan accordingly."
     },
 ];

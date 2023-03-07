@@ -1,30 +1,54 @@
+import { useState, useEffect } from "react"; 
 import { ClubCard } from "./ClubCard"; 
-import { clubsList } from "../constants/clubs";
+import axios from "axios"; 
+import search from "../assets/search/search.svg"; 
 import "../styles/ClubList.css"; 
 
-function strToSnake(str) {
-    let newStr = ""; 
-    let hyphen = "-"; 
-    for(let i = 0; i < str.length; i++) {
-        if(str[i] !== " ") {
-            newStr += str[i].toLowerCase(); 
-        } else {
-            newStr += hyphen;
-        }
-    };
-    return newStr; 
-};
-
 export const ClubList = () => {
+    // useState
+    const [clubList, setClubList] = useState([]); 
+    const [query, setQuery] = useState(""); 
+
+    const handleSubmit = (e) => {
+        e.preventDefault(); 
+    };
+
+    const handleChange = (e) => {
+        setQuery(e.target.value); 
+    }; 
+
+    useEffect(() => {
+        const getClubList = async () => {
+            try {
+                const response = await axios.get("/api/clubs"); 
+                // console.log(response.data); 
+                setClubList(response.data); 
+            } catch(error) {
+                console.log(error); 
+            };
+        }; 
+        return () => {
+            getClubList(); 
+        };
+    }, []); 
 
     return (
         <div className="clubList">
             <div className="clubList__wrapper">
+                <form className="clubList__search" onSubmit={handleSubmit}>
+                    <input 
+                        id="search"
+                        type="text" 
+                        placeholder="Search Club by Name or City"
+                        onChange={handleChange}
+                    />
+                    <img src={search} alt="search logo" />
+                </form>
                 <div className="clubList__grid">
-                    {clubsList.map((club) => (
+                    {clubList.filter((club) => club.name.toLowerCase().includes(query) || club.city.includes(query)).map((club) => (
                         <ClubCard
                             key={club.id}
-                            id={strToSnake(club.name)}
+                            id={club.id}
                             name={club.name}
                             address={club.address}
                             city={club.city}
@@ -34,6 +58,7 @@ export const ClubList = () => {
                             lon={club.lon}
                             tel={club.tel}
                             url={club.url}
+                            snake={club.snake}
                         />
                     ))}
                 </div>
