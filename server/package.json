@@ -8,8 +8,7 @@
   "scripts": {
     "start": "node server.js",
     "test": "jest --forceExit --detectOpenHandles --maxWorkers=1",
-    "dev": "nodemon server.js",
-    "install": "psql < database.sql"
+    "dev": "nodemon server.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
