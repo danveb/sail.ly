@@ -2,7 +2,7 @@ import "../styles/TermsAndConditions.css";
 
 export const TermsAndConditions = () => {
     return (
-        <div className="terms">
+        <div className="terms" data-testid="terms">
             <div className="terms__wrapper">
                 <div className="terms__main">
                     <div className="terms__top">

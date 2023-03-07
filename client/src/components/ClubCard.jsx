@@ -4,7 +4,7 @@ import "../styles/ClubCard.css";
 
 export const ClubCard = ({ id, name, address, city, state, zip, lat, lon, tel, url, snake }) => {
     return (
-        <div className="clubCard">
+        <div className="clubCard" data-testid="clubCard">
             <Link to={`/clubs/${snake}`}>
                 <img
                     src={yachtClub}

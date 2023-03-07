@@ -5,7 +5,7 @@ export const PrivacyPolicy = () => {
         <div className="privacy">
             <div className="privacy__wrapper">
                 <div className="privacy__main">
-                    <div className="privacy__top">
+                    <div className="privacy__top" data-testid="privacy__top">
                         <h1>Privacy Policy</h1>
                         <p>At SAIL.LY we take your privacy seriously. This Privacy Policy explains how we collect, use, and disclose your personal information when you use our web app.</p>
                     </div>

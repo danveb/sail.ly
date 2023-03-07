@@ -27,7 +27,7 @@ export const Club = () => {
     }, [clubID]);
 
     return (
-        <div className="club">
+        <div className="club" data-testid="club">
             <div className="club__wrapper">
                 {club.map((c) => (
                     <div key={c.id} className="club__main">
