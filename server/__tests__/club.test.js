@@ -21,36 +21,36 @@ describe("GET /api/clubs", () => {
     test("it returns a list of sailing clubs", async () => {
         const response = await request(app)
             .get("/api/clubs"); 
-        // console.log(response._body); 
-        expect(response._body).not.toBeNull(); 
-        expect(response._body.length).not.toBe(0); 
+        // console.log(response.body); 
+        expect(response.body).not.toBeNull(); 
+        expect(response.body.length).not.toBe(0); 
     });
 
     test("it returns the first sailing club", async () => {
         const response = await request(app)
             .get("/api/clubs"); 
-        expect(response._body[0].name).toMatch("Soverel Harbour Marina"); 
+        expect(response.body[0].name).toMatch("Soverel Harbour Marina"); 
     });
 }); 
 
-// GET /api/clubs/:id 
-describe("GET /api/clubs/:id", () => {
+// GET /api/clubs/:snake
+describe("GET /api/clubs/:snake", () => {
     test("it returns status code 200", async () => {
         const response = await request(app)
-            .get("/api/clubs/1"); 
+            .get("/api/clubs/soverel-harbour-marina"); 
         expect(response.statusCode).toBe(200); 
     });
 
     test("it returns the address of Soverel Harbour Marina sailing club", async () => {
         const response = await request(app)
-            .get("/api/clubs/1"); 
-        expect(response._body[0].address).toMatch("2401 PGA Blvd."); 
+            .get("/api/clubs/soverel-harbour-marina"); 
+        expect(response.body[0].address).toMatch("2401 PGA Blvd."); 
         expect(response).toBeTruthy(); 
     });
 
     test("it returns error when no sailing club matches the ID", async () => {
         const response = await request(app)
-            .get("/api/clubs/1000"); 
+            .get("/api/clubs/hello"); 
         expect(response.statusCode).toBe(400); 
     });
 });
@@ -69,21 +69,23 @@ describe("POST /api/clubs", () => {
                 lat: 10,
                 lon: -87,
                 tel: "312-000-0001",
-                url: "www.chi-yacht-club.com", 
+                url: "www.chi-yacht-club.com",
+                snake: "chi-yacht-club" 
             });
         expect(response.statusCode).toEqual(201);  
-        expect(response._body[0].name).toBe("Chi Yacht Club"); 
-        expect(response._body[0].id).toBe(50); 
+        expect(response.body[0].name).toBe("Chi Yacht Club"); 
+        expect(response.body[0].id).toBeGreaterThanOrEqual(50); 
+        expect(response.body[0].snake).toEqual("chi-yacht-club"); 
     });
 });
 
-// PUT /api/clubs/:id 
-describe("PUT /api/clubs/:id", () => {
+// PUT /api/clubs/:snake 
+describe("PUT /api/clubs/:snake", () => {
     test("it updates an existing sailing club's lat/lon", async () => {
         const response = await request(app)
-            .put("/api/clubs/50")
+            .put("/api/clubs/chi-yacht-club")
             .send({
-                name: "Chi Yacht Club", 
+                name: "Chicago Yacht Club", 
                 address: "1 E. Yacht Drive",
                 city: "Chicago", 
                 state: "IL",
@@ -92,16 +94,17 @@ describe("PUT /api/clubs/:id", () => {
                 lon: -87.26,
                 tel: "312-000-0001",
                 url: "www.chi-yacht-club.com", 
+                snake: "chi-yacht-club"
             });
         expect(response.statusCode).toBe(200); 
-        // console.log(response._body[0].lat); 
-        expect(response._body[0].lat).toBe(45.11); 
-        expect(response._body[0].lon).not.toBe("-87.26"); 
+        console.log(response.body[0].lat); 
+        expect(response.body[0].lat).toBe(45.11); 
+        expect(response.body[0].lon).not.toBe("-87.26"); 
     });
 });
 
 // DELETE /api/clubs/:id
-describe("DELETE /api/clubs/:id", () => {
+describe("DELETE /api/clubs/:snake", () => {
     test("it throws error when deleting a non-existing sailing club", async () => {
         const response = await request(app)
             .delete("/api/clubs/"); 
