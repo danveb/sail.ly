@@ -6,6 +6,9 @@ import search from "../assets/search/search.svg";
 import "../styles/ClubList.css"; 
 
 export const ClubList = () => {
+    // API_URL
+    const API_URL = process.env.REACT_APP_API_URL; 
+
     // useState
     const [clubList, setClubList] = useState([]); 
     const [query, setQuery] = useState(""); 
@@ -22,7 +25,7 @@ export const ClubList = () => {
     useEffect(() => {
         const getClubList = async () => {
             try {
-                const response = await axios.get("/api/clubs"); 
+                const response = await axios.get(`${API_URL}/api/clubs`); 
                 // console.log(response.data); 
                 setClubList(response.data); 
                 setIsLoading(!isLoading); 
@@ -33,7 +36,7 @@ export const ClubList = () => {
         return () => {
             getClubList(); 
         };
-    }, [isLoading]); 
+    }, [isLoading, API_URL]); 
 
     return (
         <div className="clubList">
