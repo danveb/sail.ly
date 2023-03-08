@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import yachtClub from "../assets/clubs/yacht-club.jpg"; 
 import "../styles/ClubCard.css"; 
 
-export const ClubCard = ({ id, name, address, city, state, zip, lat, lon, tel, url, snake }) => {
+export const ClubCard = ({ name, address, city, state, zip, lat, lon, tel, url, snake }) => {
     return (
         <div className="clubCard" data-testid="clubCard">
             <Link to={`/clubs/${snake}`}>
