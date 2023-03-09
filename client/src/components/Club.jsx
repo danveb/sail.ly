@@ -22,7 +22,7 @@ export const Club = () => {
     useEffect(() => {
         const getClub = async () => {
             const response = await axios.get(`${API_URL}/api/clubs/${clubID}`);
-            console.log(response); 
+            // console.log(response); 
             setLoading(true); 
             setClub(response.data); 
         };

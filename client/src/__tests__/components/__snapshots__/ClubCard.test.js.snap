@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClubCard Component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="clubCard"
+    data-testid="clubCard"
+  >
+    <a
+      href="/clubs/undefined"
+    >
+      <img
+        alt="yacht club"
+        class="clubCard__img"
+        src="yacht-club.jpg"
+      />
+    </a>
+    <div
+      class="clubCard__details"
+    >
+      <h4 />
+      <p />
+      <p>
+        ,  
+      </p>
+      <span>
+        Latitude: °
+      </span>
+      <span>
+        Longitude: °
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

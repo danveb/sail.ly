@@ -29,7 +29,7 @@ export const Clubs = () => {
         const getClubs = async () => {
             try {
                 const response = await axios.get(`${API_URL}/api/clubs`); 
-                console.log(response); 
+                // console.log(response); 
                 setClubList(response.data); 
                 setLoading(true); 
             } catch(error) {

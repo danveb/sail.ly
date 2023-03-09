@@ -36,10 +36,6 @@ exports[`Clubs Component matches snapshot 1`] = `
         </div>
       </div>
     </div>
-  </div>
-  <div
-    class="clubList"
-  >
     <div
       class="clubList__wrapper"
     >
@@ -57,7 +53,7 @@ exports[`Clubs Component matches snapshot 1`] = `
         />
       </form>
       <div
-        class="clubList__grid"
+        class="spinner"
       />
     </div>
   </div>

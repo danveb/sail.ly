@@ -14,12 +14,6 @@ describe("Clubs Component", () => {
         expect(asFragment()).toMatchSnapshot(); 
     });
 
-    // getByPlaceholderText
-    // test("renders the correct placeholder", () => {
-    //     const placeholderText = screen.getByPlaceholderText("Search Club by Name or City"); 
-    //     expect(placeholderText).toBeInTheDocument(); 
-    // });
-
     // getByAltText 
     test("img tag has attribute for screen readers", () => {
         render(<Clubs />); 
