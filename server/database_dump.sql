@@ -16,15 +16,15 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
-DROP DATABASE sailly;
+DROP DATABASE sailly_0klw;
 --
--- Name: sailly; Type: DATABASE; Schema: -; Owner: -
+-- Name: sailly_0klw; Type: DATABASE; Schema: -; Owner: -
 --
 
-CREATE DATABASE sailly WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE_PROVIDER = icu LOCALE = 'en_US.UTF-8' ICU_LOCALE = 'en-US';
+CREATE DATABASE sailly_0klw WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE_PROVIDER = icu LOCALE = 'en_US.UTF-8' ICU_LOCALE = 'en-US';
 
 
-\connect sailly
+\connect sailly_0klw
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;

@@ -12,7 +12,7 @@ export const Club = () => {
 
     // useState
     const [club, setClub] = useState([]); 
-    const [isLoading, setIsLoading] = useState(false); 
+    const [loading, setLoading] = useState(false); 
 
     // useLocation
     const location = useLocation(); 
@@ -23,17 +23,15 @@ export const Club = () => {
         const getClub = async () => {
             const response = await axios.get(`${API_URL}/api/clubs/${clubID}`);
             console.log(response); 
-            setIsLoading(!isLoading); 
+            setLoading(true); 
             setClub(response.data); 
         };
-        return () => {
-            getClub(); 
-        };
-    }, [clubID, isLoading, API_URL]);
+        getClub(); 
+    }, [clubID, loading, API_URL]);
 
     return (
         <div className="club" data-testid="club">
-            {!isLoading ? (
+            {!loading ? (
                 <Spinner />
             ) : (
                 <div className="club__wrapper">

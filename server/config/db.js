@@ -3,7 +3,7 @@ require("dotenv").config();
 const colors = require("colors"); 
 
 // Connection URI to node-pg 
-const connectionString = process.env.PG_CONNECTION_STRING; 
+const connectionString = process.env.PGCONNECTION_URI; 
 
 // Pool connection to local postgresql
 // const pool = new Pool({
