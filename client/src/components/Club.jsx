@@ -7,9 +7,6 @@ import { Spinner } from "./Spinner";
 import "../styles/Club.css"; 
 
 export const Club = () => {
-    // API_URL 
-    const API_URL = process.env.REACT_APP_API_URL; 
-
     // useState
     const [club, setClub] = useState([]); 
     const [loading, setLoading] = useState(false); 
@@ -21,13 +18,13 @@ export const Club = () => {
     // useEffect
     useEffect(() => {
         const getClub = async () => {
-            const response = await axios.get(`${API_URL}/api/clubs/${clubID}`);
+            const response = await axios.get(`/api/clubs/${clubID}`);
             console.log(response); 
             setLoading(true); 
             setClub(response.data); 
         };
         getClub(); 
-    }, [clubID, loading, API_URL]);
+    }, [clubID, loading]);
 
     return (
         <div className="club" data-testid="club">
