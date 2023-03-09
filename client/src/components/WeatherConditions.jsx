@@ -12,7 +12,7 @@ export const WeatherConditions = ({ club }) => {
             try {
                 const response = await axios.get(`https://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHER_API}&q=${lat},${lon}`)
                 // console.log(response.data.current.condition.icon); 
-                console.log(response.data); 
+                console.log("getWeather", response); 
                 setWeather(response.data.current); 
             } catch(error) {
                 console.log(error); 

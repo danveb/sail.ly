@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
+import mapboxgl from "mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
 import "../styles/ClubMap.css"; 
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_API;
@@ -26,7 +26,7 @@ export const ClubMap = ({ latitude, longitude }) => {
             setLat(map.current.getCenter().lat.toFixed(4));
             setZoom(map.current.getZoom().toFixed(2));
         });
-    });
+    }, [lat, lng, zoom]);
         
     return (
         <div className="club__map">
