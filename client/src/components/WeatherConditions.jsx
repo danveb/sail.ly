@@ -18,9 +18,7 @@ export const WeatherConditions = ({ club }) => {
                 console.log(error); 
             }
         }; 
-        return () => {
-            getWeather(club[0].lat, club[0].lon); 
-        }
+        getWeather(club[0].lat, club[0].lon); 
     }, [club]); 
 
     const windRecommendation = (wind) => {
