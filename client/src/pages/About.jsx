@@ -2,7 +2,7 @@ import { aboutSailing } from "../constants/about";
 import aboutSailTop from "../assets/about/about.jpg"; 
 import "../styles/About.css"; 
 
-export const About = () => {
+export default function About() {
     return (
         <div className="about">
             <div className="about__wrapper">

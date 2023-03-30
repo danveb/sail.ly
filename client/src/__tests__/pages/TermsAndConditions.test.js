@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { TermsAndConditions } from "../../pages/TermsAndConditions"; 
+import TermsAndConditions from "../../pages/TermsAndConditions"; 
 
 describe("Clubs Component", () => {
     // smoke test

@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react"; 
 import { useLocation } from "react-router-dom";
-import axios from "axios";
-import { ClubMap } from "./ClubMap";
-import { WeatherConditions } from "./WeatherConditions";
-import { Spinner } from "./Spinner";
+import ClubMap from "./ClubMap";
+import WeatherConditions from "./WeatherConditions";
+import Spinner from "./Spinner";
 import "../styles/Club.css"; 
 
-export const Club = () => {
+export default function Club() {
     // API_URL 
     const API_URL = process.env.REACT_APP_API_URL; 
 
@@ -21,10 +20,11 @@ export const Club = () => {
     // useEffect
     useEffect(() => {
         const getClub = async () => {
-            const response = await axios.get(`${API_URL}/api/clubs/${clubID}`);
-            // console.log(response); 
+            const response = await fetch(`${API_URL}/api/clubs/${clubID}`);
+            const data = await response.json(); 
+            // console.log(typeof data[0].lat); // number
             setLoading(true); 
-            setClub(response.data); 
+            setClub(data); 
         };
         getClub(); 
     }, [clubID, loading, API_URL]);

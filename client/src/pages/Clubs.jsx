@@ -1,14 +1,12 @@
-// import { ClubList } from "../components/ClubList";
+import { useState, useEffect } from "react"; 
 import { clubsIntro } from "../constants/clubs";
 import clubIntro from "../assets/clubs/club-intro.jpg"; 
-import "../styles/Clubs.css"; 
-import { useState, useEffect } from "react"; 
-import axios from "axios"; 
-import { Spinner } from "../components/Spinner";
+import Spinner from "../components/Spinner";
 import search from "../assets/search/search.svg"; 
-import { ClubCard } from "../components/ClubCard";
+import ClubCard from "../components/ClubCard";
+import "../styles/Clubs.css"; 
 
-export const Clubs = () => {
+export default function Clubs() {
     // API_URL
     const API_URL = process.env.REACT_APP_API_URL; 
 
@@ -28,9 +26,10 @@ export const Clubs = () => {
     useEffect(() => {
         const getClubs = async () => {
             try {
-                const response = await axios.get(`${API_URL}/api/clubs`); 
-                // console.log(response); 
-                setClubList(response.data); 
+                const response = await fetch(`${API_URL}/api/clubs`); 
+                const data = await response.json(); 
+                // console.log(data); 
+                setClubList(data); 
                 setLoading(true); 
             } catch(error) {
                 console.log(error); 
@@ -92,7 +91,6 @@ export const Clubs = () => {
                     )}
                 </div>
             </div>
-            {/* <ClubList /> */}
         </>
     )
 }

@@ -1,6 +1,6 @@
 import "../styles/PrivacyPolicy.css"; 
 
-export const PrivacyPolicy = () => {
+export default function PrivacyPolicy() {
     return (
         <div className="privacy">
             <div className="privacy__wrapper">

@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react"; 
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom"; 
-import { Navbar } from "./components/Navbar";
-import { MobileNavbar } from "./components/MobileNavbar";
-import { Home } from "./pages/Home"; 
-import { About } from "./pages/About"; 
-import { Clubs } from "./pages/Clubs"; 
-import { Club } from "./components/Club"; 
-import { Footer } from "./components/Footer";
-import { FAQ } from "./pages/FAQ";
-import { PrivacyPolicy } from "./pages/PrivacyPolicy";
-import { TermsAndConditions } from "./pages/TermsAndConditions";
+import Navbar from "./components/Navbar";
+import MobileNavbar from "./components/MobileNavbar";
+import Home from "./pages/Home"; 
+import About from "./pages/About"; 
+import Clubs from "./pages/Clubs"; 
+import Club from "./components/Club"; 
+import Footer from "./components/Footer";
+import FAQ from "./pages/FAQ";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
 
 const ScrollToTop = () => {
     const { pathname } = useLocation(); 
@@ -43,5 +43,3 @@ export const App = () => {
         </div>
     )
 }
-
-export default App

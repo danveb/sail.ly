@@ -3,7 +3,7 @@ import { navLinks } from "../constants/nav";
 import chevronRight from "../assets/mobileNavbar/chevron-right.svg"; 
 import "../styles/MobileNavbar.css"; 
 
-export const MobileNavbar = ({ menuOpen, setMenuOpen }) => {
+export default function MobileNavbar({ menuOpen, setMenuOpen }) {
     return (
         <nav className={"mobile__navbar " + (menuOpen && "active")}>
             <div className="mobile__menu">

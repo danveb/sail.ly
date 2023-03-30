@@ -2,7 +2,7 @@ import { FAQItem } from "../components/FAQItem";
 import faq from "../assets/faq/faq.jpg"; 
 import "../styles/FAQ.css"; 
 
-export const FAQ = () => {
+export default function FAQ() {
     return (
         <div className="faq">
             <div className="faq__wrapper">

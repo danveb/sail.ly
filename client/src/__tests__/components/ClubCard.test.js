@@ -1,25 +1,23 @@
 import { render, screen } from "@testing-library/react";
-import { ClubCard } from "../../components/ClubCard"; 
-import { BrowserRouter } from "react-router-dom"; 
-
-jest.mock("axios"); 
+import ClubCard from "../../components/ClubCard"; 
+import { BrowserRouter as Router } from "react-router-dom"; 
 
 describe("ClubCard Component", () => {
     // smoke test
     test("renders without crashing", () => {
         render(
-            <BrowserRouter>
+            <Router>
                 <ClubCard />
-            </BrowserRouter>
+            </Router>
         );
     });
 
     // snapshot test
     test("matches snapshot", () => {
         const { asFragment } = render(
-            <BrowserRouter>
+            <Router>
                 <ClubCard />
-            </BrowserRouter>
+            </Router>
         ); 
         expect(asFragment()).toMatchSnapshot(); 
     });
@@ -27,9 +25,9 @@ describe("ClubCard Component", () => {
     // getByText
     test("renders Latitude text", () => {
         render(
-            <BrowserRouter>
+            <Router>
                 <ClubCard />
-            </BrowserRouter>
+            </Router>
         );
         const textElement = screen.getByText("Latitude:", { exact: false }); 
         expect(textElement).toBeInTheDocument(); 
@@ -38,16 +36,16 @@ describe("ClubCard Component", () => {
     // getByTestId
     test("it renders ClubCard div", () => {
         render(
-            <BrowserRouter>
+            <Router>
                 <ClubCard />
-            </BrowserRouter>
+            </Router>
         );
         const testId = screen.getByTestId("clubCard"); 
         expect(testId).toBeInTheDocument(); 
     });
 
-    // mocking axios but test not working... 
-    // test.skip("renders clubList data [] returned by axios", async () => {
+    // mocking fetch API but test not working... 
+    // test.skip("renders clubList data [] returned by fetch API", async () => {
     //     const mockData = [
     //         {
     //             id: 1, 
@@ -74,14 +72,16 @@ describe("ClubCard Component", () => {
     //             snake: "sunrise-harbor-marina",
     //         },
     //     ]; 
-    //     axios.get.mockResolvedValueOnce({ data: mockData }); 
-
+    //     // global.fetch = jest.fn().mockResolvedValue({
+    //     //     json: () => Promise.resolve(mockData), 
+    //     // });
+    //     jest.spyOn(global, 'fetch').mockResolvedValue({
+    //         json: jest.fn().mockResolvedValue(mockData),
+    //     });
     //     render(
-    //         <BrowserRouter>
+    //         <Router>
     //             <ClubCard />
-    //         </BrowserRouter>
+    //         </Router>
     //     ); 
-    //     const textElement = screen.getByText("Marina", { exact: false }); 
-    //     expect(textElement).not.toBeInTheDocument(); 
     // });
 }); 

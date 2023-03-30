@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { PrivacyPolicy } from "../../pages/PrivacyPolicy"; 
+import PrivacyPolicy from "../../pages/PrivacyPolicy"; 
 
 describe("Clubs Component", () => {
     // smoke test

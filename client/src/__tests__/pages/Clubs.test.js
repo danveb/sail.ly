@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { Clubs } from "../../pages/Clubs"; 
+import Clubs from "../../pages/Clubs"; 
 
 describe("Clubs Component", () => {
     // smoke test

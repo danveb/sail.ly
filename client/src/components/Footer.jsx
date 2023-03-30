@@ -3,7 +3,7 @@ import { footerLinks } from "../constants/footer";
 import github from "../assets/footer/github.svg"; 
 import "../styles/Footer.css"; 
 
-export const Footer = () => {
+export default function Footer() {
     return (
         <footer className="footer">
             <div className="footer__wrapper">

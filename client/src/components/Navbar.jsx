@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { navLinks } from "../constants/nav"; 
 import "../styles/Navbar.css"
 
-export const Navbar = ({ menuOpen, setMenuOpen }) => {
+export default function Navbar({ menuOpen, setMenuOpen }) {
     // useEffect 
     // when resizing window we'll handle state back to closing mobileMenu/navbar bg
     useEffect(() => {

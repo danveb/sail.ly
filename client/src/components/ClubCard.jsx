@@ -2,7 +2,16 @@ import { Link } from "react-router-dom";
 import yachtClub from "../assets/clubs/yacht-club.jpg"; 
 import "../styles/ClubCard.css"; 
 
-export const ClubCard = ({ name, address, city, state, zip, lat, lon, tel, url, snake }) => {
+export default function ClubCard({ name, address, city, state, zip, lat, lon, tel, url, snake }) {
+    // check if lat/lon received are numbers
+    // use .toFixed() method to 2 decimal places
+    function fixLatLon(num) {
+        if(typeof num === "number") {
+            return num.toFixed(2); 
+        }; 
+        return num; 
+    };
+
     return (
         <div className="clubCard" data-testid="clubCard">
             <Link to={`/clubs/${snake}`}>
@@ -16,8 +25,8 @@ export const ClubCard = ({ name, address, city, state, zip, lat, lon, tel, url, 
                 <h4>{name}</h4>
                 <p>{address}</p>
                 <p>{city}, {state} {zip}</p>
-                <span>Latitude: {lat.toFixed(2)}°</span>
-                <span>Longitude: {lon.toFixed(2)}°</span>
+                <span>Latitude: {fixLatLon(lat)}°</span>
+                <span>Longitude: {fixLatLon(lon)}°</span>
             </div>
         </div>
     )

@@ -1,7 +1,7 @@
 import chevronDown from "../assets/home/chevron-down.svg"; 
 import "../styles/Home.css"; 
 
-export const Home = () => {
+export default function Home() {
     return (
         <div>
             <div className="home">

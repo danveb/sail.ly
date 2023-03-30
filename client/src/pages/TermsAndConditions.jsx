@@ -1,6 +1,6 @@
 import "../styles/TermsAndConditions.css"; 
 
-export const TermsAndConditions = () => {
+export default function TermsAndConditions() {
     return (
         <div className="terms" data-testid="terms">
             <div className="terms__wrapper">

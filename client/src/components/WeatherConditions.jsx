@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import axios from "axios"; 
 import "../styles/WeatherConditions.css"; 
 
-export const WeatherConditions = ({ club }) => {
+export default function WeatherConditions({ club }) {
     // useState 
     const [weather, setWeather] = useState({}); 
 
@@ -10,10 +9,10 @@ export const WeatherConditions = ({ club }) => {
     useEffect(() => {
         const getWeather = async (lat, lon) => {
             try {
-                const response = await axios.get(`https://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHER_API}&q=${lat},${lon}`)
-                // console.log(response.data.current.condition.icon); 
-                // console.log("getWeather", response); 
-                setWeather(response.data.current); 
+                const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHER_API}&q=${lat},${lon}`);
+                const data = await response.json(); 
+                // console.log(data.current); 
+                setWeather(data.current); 
             } catch(error) {
                 console.log(error); 
             }

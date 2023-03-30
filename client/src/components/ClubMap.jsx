@@ -4,7 +4,7 @@ import "../styles/ClubMap.css";
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_API;
 
-export const ClubMap = ({ latitude, longitude }) => {
+export default function ClubMap({ latitude, longitude }) {
     const mapContainer = useRef(null);
     const map = useRef(null);
     const [lng, setLng] = useState(longitude);
