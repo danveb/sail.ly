@@ -23,6 +23,11 @@
     font-size: 22px; 
 }
 
+.clubCard__details h4 a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
 .clubCard__details p {
     font-family: "Yrsa", sans-serif; 
     font-size: 16px; 

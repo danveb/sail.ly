@@ -71,7 +71,8 @@ export default function Clubs() {
                         <Spinner />
                     ) : (
                         <div className="clubList__grid">
-                            {clubList.filter((club) => club.name.toLowerCase().includes(query) || club.city.includes(query)).map((club) => (
+                            {/* filter club's name, city, or state either in capital, or all lowercase */}
+                            {clubList.filter((club) => club.name.toLowerCase().includes(query) || club.name.includes(query) || club.city.toLowerCase().includes(query) || club.city.toLowerCase().includes(query) || club.city.includes(query) || club.state.includes(query)).map((club) => (
                                 <ClubCard
                                     key={club.id}
                                     id={club.id}

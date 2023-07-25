@@ -22,7 +22,11 @@ export default function ClubCard({ name, address, city, state, zip, lat, lon, te
                 />
             </Link>
             <div className="clubCard__details">
-                <h4>{name}</h4>
+                <h4>
+                    <Link to={`/clubs/${snake}`}>
+                        {name}
+                    </Link> 
+                </h4>
                 <p>{address}</p>
                 <p>{city}, {state} {zip}</p>
                 <span>Latitude: {fixLatLon(lat)}°</span>

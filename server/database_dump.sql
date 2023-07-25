@@ -1,3 +1,6 @@
+-- POSTGRESQL database_dump 
+-- update: database name -> sailly_42vm
+
 --
 -- PostgreSQL database dump
 --
@@ -5,26 +8,26 @@
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.2
 
-SET statement_timeout = 0;
-SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
-SET client_encoding = 'UTF8';
-SET standard_conforming_strings = on;
-SELECT pg_catalog.set_config('search_path', '', false);
-SET check_function_bodies = false;
-SET xmloption = content;
-SET client_min_messages = warning;
-SET row_security = off;
+-- SET statement_timeout = 0;
+-- SET lock_timeout = 0;
+-- SET idle_in_transaction_session_timeout = 0;
+-- SET client_encoding = 'UTF8';
+-- SET standard_conforming_strings = on;
+-- SELECT pg_catalog.set_config('search_path', '', false);
+-- SET check_function_bodies = false;
+-- SET xmloption = content;
+-- SET client_min_messages = warning;
+-- SET row_security = off;
 
-DROP DATABASE sailly_0klw;
---
--- Name: sailly_0klw; Type: DATABASE; Schema: -; Owner: -
---
+-- DROP DATABASE sailly_42vm;
+-- --
+-- -- Name: sailly_42vm; Type: DATABASE; Schema: -; Owner: -
+-- --
 
-CREATE DATABASE sailly_0klw WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE_PROVIDER = icu LOCALE = 'en_US.UTF-8' ICU_LOCALE = 'en-US';
+-- CREATE DATABASE sailly_42vm WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE_PROVIDER = icu LOCALE = 'en_US.UTF-8' ICU_LOCALE = 'en-US';
 
 
-\connect sailly_0klw
+-- \connect sailly_42vm
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
