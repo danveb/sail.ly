@@ -1,7 +1,7 @@
 export const footerLinks = [
     {
         title: "Explore",
-        links: ["about", "clubs", "faq"],
+        links: ["about", "clubs", "FAQ"],
     },
     {
         title: "License",

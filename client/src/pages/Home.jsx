@@ -7,8 +7,8 @@ export default function Home() {
             <div className="home">
                 <div className="home__top">
                     <div className="home__top--title">
-                        <h1>#SS | 23</h1>
-                        <h3>Dream in open waters</h3>
+                        <h1>#SF | 23</h1>
+                        <h3>Open waters</h3>
                         {/* LINK to clubs */}
                     </div>
                     <div className="home__top--bg"></div>

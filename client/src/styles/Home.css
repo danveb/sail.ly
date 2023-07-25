@@ -12,7 +12,8 @@
     left: 3%; 
     top: 35%; 
     z-index: 2; 
-    color: #dad9d9; 
+    color: #fff; 
+    opacity: 0.7; 
     letter-spacing: 0.6rem; 
 }
 
@@ -22,6 +23,10 @@
 }
 
 @media screen and (max-width: 768px) {
+    .home__top--title {
+        left: 6%;    
+    }
+
     .home__top--title h1 {
         font-size: 50px; 
     }
