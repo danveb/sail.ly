@@ -32,7 +32,7 @@ $ yarn dev
 $ yarn start 
 ```
 
-<h3>🚀 Deploy</h3>
+<h3>🚀 PostgreSQL Connection (hosted)</h3>
 
 ```js
 * Connect to hosted PostgreSQL 
@@ -40,7 +40,7 @@ $ yarn start
 # db.js 
 
 // Connection URI to node-pg 
-const connectionString = "postgresql://dbuser:secretpassword@database.server.com:3211/mydb"; 
+const connectionString = "postgresql://dbuser:secretpassword@database.server.com:3211/db_name"; 
 
 const pool = new Pool({
     connectionString, 
@@ -60,10 +60,11 @@ $ PGPASSWORD=secretpassword psql -h host -U username database
 db_name=> \i database_dump.sql 
 ``` 
 
-<h3>✈️ Live</h3>
+<h3>🛫 Deployment</h3>
 
-<p align="left">Netlify -> <a href="https://sail-ly.netlify.app" target="_blank">Link to Netlify</a></p>
-<p align="left">Repository -> <a href="https://www.github.com/danveb/sail.ly" target="_blank">Link to GitHub</a></p>
+<p align="left">🔥 Client -> <a href="https://sail-ly.netlify.app" target="_blank">Link to Netlify</a></p>
+<p align="left">🔥 Server -> <a href="https://sail-ly.onrender.com" target="_blank">Link to Render</a></p>
+<p align="left">🔥 Repo -> <a href="https://www.github.com/danveb/sail.ly" target="_blank">Link to GitHub</a></p>
 
-<h3>🦴 API </h3>
+<h3>🏡 API </h3>
 <p align="left">Weather API -> <a href="https://www.weatherapi.com/docs/" target="_blank">Link to Docs</a></p>
