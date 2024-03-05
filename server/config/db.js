@@ -1,11 +1,14 @@
-const { Pool } = require("pg"); 
-require("dotenv").config(); 
-const colors = require("colors"); 
+const { Pool } = require("pg");
+require("dotenv").config();
+const colors = require("colors");
 
-// Connection URI to node-pg (Render PostgreSQL)
-const connectionString = process.env.PGCONNECTION_URI; 
+// connection URI to node-pg (render psql -> deprecated) 
+// const connectionString = process.env.PGCONNECTION_URI;
 
-// Pool connection to local postgresql
+// connection URI to pg (vercel psql) 
+const connectionString = process.env.POSTGRES_URL;
+
+// pool connection to local psql
 // const pool = new Pool({
 //     host: process.env.PGHOST, 
 //     user: process.env.PGUSER, 
@@ -16,9 +19,9 @@ const connectionString = process.env.PGCONNECTION_URI;
 
 // Pool connection for deployment
 const pool = new Pool({
-    connectionString, 
+    connectionString,
 });
 
-console.log("PostgreSQL connected".cyan.underline); 
+console.log("PostgreSQL connected".cyan.underline);
 
 module.exports = pool
