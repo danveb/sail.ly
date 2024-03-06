@@ -1,26 +1,20 @@
-<h1 align="center">⛵️ SAIL.LY</h1>
+# ⛵️ sail.ly
 
-<p align="left">SAIL.LY is an application for sailors and water sports' enthusiasts that have a common goal to share the joy in sailing. Receive a recommendation based on real-time wind conditions to enjoy a day out. Happy Sailing! </p>
+An application for sailors and water sports' enthusiasts who share the joy in sailing on open waters. Real-time wind conditions are available along with latitude and longitude coordinates. 
 
-<h3>👨‍💻 Technologies</h3>
+Happy sailing!
 
-<ul>
-    <li>JavaScript/React.js</li>
-    <li>Node.js/Express.js</li>
-    <li>CSS</li>
-    <li>PostgreSQL</li>
-    <li>Weather API</li>
-    <li>Jest/Supertest/React Testing Library</li>
-</ul>
+### 👨‍💻 Technologies
+- React.js
+- Node/Express.js
+- CSS
+- PostgreSQL
+- Weather API
+- Jest/Supertest/React Testing Library 
 
-<h3>📝 How</h3>
+### ⚡ Development
 
-<p align="left">Welcome to SAIL.LY</p>
-<p align="left">A list of yacht clubs are available on a PostgreSQL database. Key info, such as latitude, longitude are available for users to know exact coordinates. Current weather conditions are fetched from Weather API for each club.</p>
-
-<h3>⚡ Development</h3>
-
-```js
+```sh
 <CLIENT>
 $ yarn install 
 $ yarn start 
@@ -32,15 +26,13 @@ $ yarn dev
 $ yarn start 
 ```
 
-<h3>🚀 PostgreSQL Connection (hosted)</h3>
+### 🚀 PostgreSQL Connection (hosted on Vercel)
 
 ```js
-* Connect to hosted PostgreSQL 
-    
-# db.js 
+db.js 
 
-// Connection URI to node-pg 
-const connectionString = "postgresql://dbuser:secretpassword@database.server.com:3211/db_name"; 
+// Connection URI to hosted postgreSQL
+const connectionString = "//default:database_url:5432/verceldb?sslmode=require"
 
 const pool = new Pool({
     connectionString, 
@@ -48,23 +40,24 @@ const pool = new Pool({
 ```
 
 ```js
-* PSQL Command to remotely access db 
+// psql command to remotely access hosted db
 
-$ PGPASSWORD=secretpassword psql -h host -U username database
+$ psql "postgres://default:************@ep-odd-moon-23544608.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require"
 ```
 
 ```js
-* Use existing database_dump.sql to populate db with existing columns/rows
-* Make sure to use correct db name for external PostgreSQL 
+// use existing database_dump.sql to populate db with existing columns/rows
 
 db_name=> \i database_dump.sql 
 ``` 
 
-<h3>🛫 Deployment</h3>
+### 🛫 Deployment
 
-<p align="left">🔥 Client -> <a href="https://sail-ly.netlify.app" target="_blank">Link to Netlify</a></p>
-<p align="left">🔥 Server -> <a href="https://sail-ly.onrender.com" target="_blank">Link to Render</a></p>
-<p align="left">🔥 Repo -> <a href="https://www.github.com/danveb/sail.ly" target="_blank">Link to GitHub</a></p>
+🔥 [Client | Vercel](https://sail-ly.vercel.app)
 
-<h3>🏡 API </h3>
-<p align="left">Weather API -> <a href="https://www.weatherapi.com/docs/" target="_blank">Link to Docs</a></p>
+🔥 [Server | Vercel](https://sail-ly-server.vercel.app)
+
+🔥 [Repo | GitHub](https://www.github.com/danveb/sail.ly)
+
+### 🏡 API
+🌤️ [Weather API](https://www.weatherapi.com/docs)
