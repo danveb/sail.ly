@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import yachtClub from "../assets/clubs/yacht-club.webp";
 import "../styles/ClubCard.css";
 
-export default function ClubCard({ name, address, city, state, zip, lat, lon, tel, url, snake }) {
+export default function ClubCard({ name, address, city, state, zip, lat, lon, snake }) {
   // check if lat/lon received are numbers
   // use .toFixed() method to 2 decimal places
   function fixLatLon(num) {

@@ -35,6 +35,8 @@
 .terms__bottom p {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
+  margin: 20px 0;
+  line-height: 2.5;
 }
 
 .terms__top,

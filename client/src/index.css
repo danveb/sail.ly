@@ -12,6 +12,13 @@ body {
   background-color: #000;
 }
 
+svg {
+  /* width: 20px;
+  height: 20px; */
+  width: 1.5rem;
+  z-index: 30;
+}
+
 /* pseudoelement for selecting text and turns background yellow and text black */
 ::selection {
   color: #000;

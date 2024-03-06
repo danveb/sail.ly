@@ -47,5 +47,6 @@
 .about__bottom p {
   font-family: "Yrsa", sans-serif;
   color: #333;
-  margin: 15px 0;
+  margin: 20px 0;
+  line-height: 2;
 }
