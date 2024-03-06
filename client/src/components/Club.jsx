@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { ClubMap, Spinner, WeatherConditions } from "../components";
+import { Spinner, WeatherConditions } from "../components";
 import "../styles/Club.css";
 
 export default function Club() {
@@ -41,11 +41,7 @@ export default function Club() {
                 <span>Latitude: {c.lat.toFixed(2)}°</span>
                 <span>Longitude: {c.lon.toFixed(2)}°</span>
               </div>
-              <div className="club__map">
-                <ClubMap latitude={c.lat.toFixed(2)} longitude={c.lon.toFixed(2)} />
-              </div>
               <div className="club__weather">
-                {/* Weather Conditions */}
                 <WeatherConditions club={club} />
               </div>
             </div>

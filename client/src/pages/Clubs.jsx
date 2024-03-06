@@ -82,8 +82,6 @@ export default function Clubs() {
                   zip={club.zip}
                   lat={club.lat}
                   lon={club.lon}
-                  tel={club.tel}
-                  url={club.url}
                   snake={club.snake}
                 />
               ))}

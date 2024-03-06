@@ -1,6 +1,5 @@
 export { default as Club } from "./Club";
 export { default as ClubCard } from "./ClubCard";
-export { default as ClubMap } from "./ClubMap";
 export { default as FAQItem } from "./FAQItem";
 export { default as Footer } from "./Footer";
 export { default as MobileNavbar } from "./MobileNavbar";

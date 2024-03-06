@@ -36,6 +36,8 @@
 .privacy__bottom li {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
+  margin: 20px 0;
+  line-height: 2.5;
 }
 
 .privacy__top,
