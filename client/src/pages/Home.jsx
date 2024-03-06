@@ -1,20 +1,20 @@
-import chevronDown from "../assets/home/chevron-down.svg"; 
-import "../styles/Home.css"; 
+import chevronDown from "../assets/home/chevron-down.svg";
+import "../styles/Home.css";
 
 export default function Home() {
-    return (
-        <div>
-            <div className="home">
-                <div className="home__top">
-                    <div className="home__top--title">
-                        <h1>#SF | 23</h1>
-                        <h3>Open waters</h3>
-                        {/* LINK to clubs */}
-                    </div>
-                    <div className="home__top--bg"></div>
-                    <img src={chevronDown} alt="chevron down arrow" />
-                </div>
-            </div>
+  return (
+    <div>
+      <div className="home">
+        <div className="home__top">
+          <div className="home__top--title">
+            <h1>#SF | 23</h1>
+            <h3>Open waters</h3>
+            {/* LINK to clubs */}
+          </div>
+          <div className="home__top--bg"></div>
+          <img src={chevronDown} alt="chevron down arrow" />
         </div>
-    )
+      </div>
+    </div>
+  )
 }

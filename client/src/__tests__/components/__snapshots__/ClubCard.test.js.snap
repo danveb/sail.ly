@@ -12,13 +12,17 @@ exports[`ClubCard Component matches snapshot 1`] = `
       <img
         alt="yacht club"
         class="clubCard__img"
-        src="yacht-club.jpg"
+        src="yacht-club.webp"
       />
     </a>
     <div
       class="clubCard__details"
     >
-      <h4 />
+      <h4>
+        <a
+          href="/clubs/undefined"
+        />
+      </h4>
       <p />
       <p>
         ,  
