@@ -19,7 +19,7 @@ const connectionString = process.env.POSTGRES_URL;
 
 // Pool connection for deployment
 const pool = new Pool({
-    connectionString,
+  connectionString,
 });
 
 console.log("PostgreSQL connected".cyan.underline);

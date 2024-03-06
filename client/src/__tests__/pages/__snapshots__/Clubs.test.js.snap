@@ -16,7 +16,7 @@ exports[`Clubs Component matches snapshot 1`] = `
         >
           <img
             alt="sailing yacht in ocean"
-            src="club-intro.jpg"
+            src="club-intro.webp"
           />
         </div>
         <div

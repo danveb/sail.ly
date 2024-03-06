@@ -16,7 +16,7 @@ exports[`About Component matches snapshot 1`] = `
         >
           <img
             alt="sailing yacht in ocean"
-            src="about.jpg"
+            src="about.webp"
           />
         </div>
         <div
